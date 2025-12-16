@@ -23,12 +23,13 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.0.2</version>
    <configuration>
-        <webResources>
-            <resource>
-                <directory>src/main/webapp</directory>
-                <targetPath>WEB-INF</targetPath>
-            </resource>
-        </webResources>
+         <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <mainClass>com.mycompany.app.App</mainClass>
+            </manifest>
+          </archive>
     </configuration>
       </plugin>
     </plugins>
